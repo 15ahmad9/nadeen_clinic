@@ -2,6 +2,9 @@
 
 require "auth.php";
 require "../config/database.php";
+require_once "../includes/articles_schema.php";
+
+ensure_articles_schema($pdo);
 
 
 
@@ -22,6 +25,11 @@ $pdo->query(
 $reviews =
 $pdo->query(
 "SELECT COUNT(*) FROM reviews"
+)->fetchColumn();
+
+$articles =
+$pdo->query(
+"SELECT COUNT(*) FROM articles"
 )->fetchColumn();
 
 
@@ -103,6 +111,18 @@ Reviews
 
 </div>
 
+
+<div class="card">
+
+<h3>
+Articles
+</h3>
+
+<h1>
+<?= $articles ?>
+</h1>
+
+</div>
 
 </div>
 

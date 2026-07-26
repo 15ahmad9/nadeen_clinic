@@ -55,7 +55,9 @@
 <?=t('reviews')?>
 </a>
 
-<a href="#services-section">
+<a href="articles.php"><?=t('articles')?></a>
+
+<a href="index.php#services-section">
 
 <?=t('services')?>
 

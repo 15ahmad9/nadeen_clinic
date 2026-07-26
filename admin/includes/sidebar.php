@@ -46,6 +46,10 @@ require_once "../includes/language.php";
 
 </a>
 
+<a href="articles.php">
+<?=t('articles')?>
+</a>
+
 
 
 <a href="messages.php">
