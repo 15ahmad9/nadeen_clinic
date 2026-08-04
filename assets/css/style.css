@@ -3841,7 +3841,7 @@ body{
 }
 
 .nav-logo a:hover img{
-    transform:scale(1.035);
+    transform:scale(1.05);
 }
 
 .nav-links a{
@@ -4013,7 +4013,7 @@ body{overflow-x:hidden;}
 .service-card.show{opacity:1;transform:translateY(0);}
 .service-card:hover{transform:translateY(-8px);}
 @media(max-width:900px){
- .navbar{display:flex;min-height:80px;}
+ .navbar{display:flex;min-height:90px;}
  .nav-links{width:100%;left:0!important;right:0;}
  .nav-logo img{max-height:68px;object-fit:contain;}
  .hero-container,.about-container,.services-grid{width:100%;max-width:100%;}
@@ -4021,7 +4021,7 @@ body{overflow-x:hidden;}
 }
 @media(max-width:480px){
  .navbar{padding:0 12px;}
- .nav-logo img{max-width:110px;height:60px!important;}
+ .nav-logo img{max-width:110px;height:70px!important;}
  .menu-toggle{width:30px;}
  .services-section{padding-left:10px;padding-right:10px;}
 }
@@ -4260,5 +4260,204 @@ html[dir="rtl"] .section-title{
 
     .nav-dropdown.active .dropdown-menu{
         display:block;
+    }
+}
+
+
+/* Updated Services Dropdown Design */
+.nav-dropdown .dropdown-toggle{
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.nav-dropdown .dropdown-toggle::after{
+    content:"⌄";
+    font-size:14px;
+}
+
+.dropdown-menu{
+    min-width:280px;
+    border-radius:18px;
+    padding:14px 12px;
+    background:#ffffff;
+}
+
+.dropdown-menu a{
+    border-radius:12px;
+    margin:4px 0;
+    padding:12px 16px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.dropdown-menu a::before{
+    content:"✓";
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#e8f7f6;
+    color:#4aad9f;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+}
+
+.dropdown-menu a:hover{
+    background:#f3fbfa;
+}
+
+/* Mobile services menu */
+@media(max-width:900px){
+
+    .nav-links{
+        background:#fff !important;
+    }
+
+    .nav-links a,
+    .nav-dropdown .dropdown-toggle{
+        color:#12394d !important;
+    }
+
+    .nav-dropdown{
+        width:100%;
+    }
+
+    .dropdown-menu{
+        width:90%;
+        margin:0 auto;
+        background:#fff;
+        border-radius:16px;
+        padding:8px;
+        box-shadow:0 8px 25px rgba(18,57,77,.12);
+    }
+
+    .dropdown-menu a{
+        text-align:right;
+        justify-content:flex-start;
+        color:#12394d !important;
+        white-space:normal;
+    }
+
+    html[dir="ltr"] .dropdown-menu a{
+        text-align:left;
+    }
+
+    .dropdown-menu a::before{
+        flex-shrink:0;
+    }
+}
+
+
+/* =====================================================
+   SERVICES DROPDOWN — HOVER DESKTOP / TAP MOBILE
+===================================================== */
+.nav-dropdown{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.nav-dropdown .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    width:auto;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+/* The arrow is a real element so it does not conflict with
+   the animated underline used by .nav-links a::after. */
+.nav-dropdown .dropdown-arrow{
+    position:static;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:13px;
+    height:9px;
+    flex:0 0 auto;
+    color:currentColor;
+    transition:transform .22s ease;
+}
+
+.nav-dropdown .dropdown-arrow svg{
+    display:block;
+    width:100%;
+    height:100%;
+    overflow:visible;
+}
+
+.nav-dropdown .dropdown-arrow path{
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+/* Disable the old pseudo-element arrow while preserving the
+   normal underline pseudo-element declared for navigation links. */
+.nav-dropdown .dropdown-toggle::after{
+    content:"";
+}
+
+@media (min-width:901px){
+    .nav-dropdown:hover > .dropdown-menu,
+    .nav-dropdown:focus-within > .dropdown-menu{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+        pointer-events:auto;
+    }
+
+    .nav-dropdown:hover .dropdown-arrow,
+    .nav-dropdown:focus-within .dropdown-arrow{
+        transform:rotate(180deg);
+    }
+
+    .nav-dropdown > .dropdown-menu{
+        pointer-events:none;
+    }
+
+    /* Keep the hover area connected while moving to the menu. */
+    .nav-dropdown > .dropdown-menu::before{
+        content:"";
+        position:absolute;
+        left:0;
+        right:0;
+        top:-10px;
+        height:10px;
+    }
+
+    html[dir="rtl"] .nav-dropdown > .dropdown-menu{
+        right:0;
+        left:auto;
+    }
+
+    html[dir="ltr"] .nav-dropdown > .dropdown-menu{
+        left:0;
+        right:auto;
+    }
+}
+
+@media (max-width:900px){
+    .nav-dropdown{
+        display:block;
+        width:100%;
+    }
+
+    .nav-dropdown .dropdown-toggle{
+        display:flex;
+        width:100%;
+    }
+
+    .nav-dropdown.active .dropdown-arrow{
+        transform:rotate(180deg);
     }
 }

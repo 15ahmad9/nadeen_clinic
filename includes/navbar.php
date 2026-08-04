@@ -28,8 +28,13 @@
 <a href="reviews.php"><?=t('reviews')?></a>
 
 <div class="nav-dropdown">
-<a href="javascript:void(0)" class="dropdown-toggle">
-<?=t('services')?>
+<a href="index.php#services-section" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+<span class="dropdown-label"><?=t('services')?></span>
+<span class="dropdown-arrow" aria-hidden="true">
+<svg viewBox="0 0 12 8" focusable="false" aria-hidden="true">
+<path d="M1 1.5 6 6.5l5-5" />
+</svg>
+</span>
 </a>
 <div class="dropdown-menu">
 <a href="index.php#services-section"><?=t('orthodontics')?></a>
@@ -44,8 +49,8 @@
 </div>
 </div>
 
-<a href="index.php#location-section"><?=t('location')?></a>
-<a href="index.php#location-section"><?=t('contact')?></a>
+<a href="index.php#location-section" class="mobile-menu-close-link"><?=t('location')?></a>
+<a href="index.php#location-section" class="mobile-menu-close-link"><?=t('contact')?></a>
 
 </div>
 
