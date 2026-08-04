@@ -28,7 +28,7 @@ $translations = [
 'about'=>'عن الدكتورة',
 'services'=>'خدمات العيادة',
 'gallery'=>'الحالات',
-'reviews'=>'التقييمات',
+'reviews'=>'تقييمات المرضى',
 'certificates'=>'الشهادات',
 'location'=>'موقع العيادة',
 'contact'=>'تواصل معنا',
@@ -192,7 +192,7 @@ $translations = [
 'working_time'=>'السبت إلى الخميس من 10:00 صباحاً إلى 8:00 مساءً',
 
 
-'clinic_address'=>'شارع حنين بن إسحاق، عمّان',
+'clinic_address'=>'الشميساني، خلف المستشفى التخصصي، مجمع الرياض الطبي، الطابق الاول',
 'working_time'=>'السبت إلى الخميس من 10:00 صباحاً إلى 8:00 مساءً',
 
 /* Footer */
@@ -222,7 +222,7 @@ $translations = [
 
 'cases'=>'الحالات',
 
-'reviews'=>'التقييمات',
+'reviews'=>'تقييمات المرضى',
 
 // admin panel
 
@@ -230,8 +230,8 @@ $translations = [
 'logout'=>'تسجيل الخروج',
 'language'=>'English',
 'dashboard'=>'لوحة التحكم المسؤول',
-'gallery'=>' صور',
-'reviews'=>'التقييمات',
+'gallery'=>' الحالات',
+'reviews'=>'تقييمات المرضى',
 'messages'=>'الرسائل',
 'cases'=>'الحالات',
 'articles_management'=>'إدارة المقالات',

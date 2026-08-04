@@ -281,3 +281,10 @@ revealElements.forEach(el=>{
     revealObserver.observe(el);
 });
 
+
+
+document.querySelectorAll('.dropdown-toggle').forEach(btn=>{
+    btn.addEventListener('click',function(){
+        this.parentElement.classList.toggle('active');
+    });
+});
